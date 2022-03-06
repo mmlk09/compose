@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: 'redis'
+  web:
+    restart: always
+    build: .
+    ports:
+      - "4041:8081"
