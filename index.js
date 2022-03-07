@@ -17,7 +17,7 @@ if (!dbcon.get('visits')) {
 app.get('/', (req, res) => {
     dbcon.get('visits', (err, visits) => {
         console.log('WebApp visits: ' +  visits);
-        res.send("You are: " + visits);
+        res.send("You Are: " + visits);
         dbcon.set('visits', parseInt(visits) + 1);
         if ((parseInt(visits) % 10) == 0) {
             proc.exit(parseInt(visits));
